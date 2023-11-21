@@ -25,14 +25,14 @@ const Login = () => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     axios
-      .post("https://finance-dashboard-mern-application.vercel.app/login", {
+      .post("http://localhost:1337/", {
         email,
         password,
       })
       .then((result) => {
         console.log(result);
         if (result.data === "success") {
-          navigate("/");
+          navigate("/dashboard");
         }
       })
       .catch((err) => console.log(err));

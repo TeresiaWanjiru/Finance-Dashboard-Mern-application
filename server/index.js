@@ -26,11 +26,7 @@ app.use(morgan("common"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cors(
-    {
-        origin: [""],
-        methods: ["POST", "GET"],
-        credentials: true
-    }
+    
 ));
 
 
@@ -39,7 +35,7 @@ app.use("/kpi", kpiRoutes);
 app.use('/product',productRoutes)
 app.use('/transaction', transactionRoutes)
 app.use('/register',registerRoutes)
-app.use('/login',loginRoutes)
+app.use('/',loginRoutes)
 /*MONGOOSE SETUP */
 const PORT = process.env.PORT || 9000
 mongoose

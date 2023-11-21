@@ -26,7 +26,7 @@ const Signup = () => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     axios
-      .post("https://finance-dashboard-mern-application.vercel.app/register", {
+      .post("http://localhost:1337/register", {
         firstName,
         lastName,
         email,
