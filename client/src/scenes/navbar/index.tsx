@@ -5,9 +5,7 @@ import { Box, Theme, Typography, useTheme } from "@mui/material";
 import FlexBetween from "@/components/FlexBetween";
 import { useLocation } from "react-router-dom";
 
-type Props = {};
-
-const Navbar = (props: Props) => {
+const Navbar = () => {
   const location = useLocation();
   const showNavbar =
     location.pathname !== "/login" && location.pathname !== "/register";
