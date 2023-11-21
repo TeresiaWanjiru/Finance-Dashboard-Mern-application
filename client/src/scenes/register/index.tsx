@@ -22,10 +22,11 @@ const Signup = () => {
   const [password, setPassword] = useState<any>();
   const navigate = useNavigate();
 
+  axios.defaults.withCredentials = true;
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     axios
-      .post("http://localhost:1337/register", {
+      .post("https://finance-dashboard-mern-application.vercel.app/register", {
         firstName,
         lastName,
         email,
