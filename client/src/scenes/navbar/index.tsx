@@ -8,7 +8,7 @@ import { useLocation } from "react-router-dom";
 const Navbar = () => {
   const location = useLocation();
   const showNavbar =
-    location.pathname !== "/login" && location.pathname !== "/register";
+    location.pathname !== "/" && location.pathname !== "/register";
   const theme = useTheme<Theme>();
   const [selected, setSelected] = useState("dashboard");
 
